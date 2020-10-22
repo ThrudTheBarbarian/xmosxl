@@ -665,9 +665,9 @@ design rules under a new name.
 </pass>
 </autorouter>
 <elements>
-<element name="U$1" library="xmosxl" package="BGA374C80P21X21_1800X1800X136" value="XEF232" x="30" y="60" smashed="yes">
-<attribute name="NAME" x="30" y="50" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="30" y="70" size="1.27" layer="27" align="center"/>
+<element name="U$1" library="xmosxl" package="BGA374C80P21X21_1800X1800X136" value="XEF232" x="50" y="60" smashed="yes">
+<attribute name="NAME" x="50" y="50" size="1.27" layer="25" align="center"/>
+<attribute name="VALUE" x="50" y="70" size="1.27" layer="27" align="center"/>
 </element>
 </elements>
 <signals>
