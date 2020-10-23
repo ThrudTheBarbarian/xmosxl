@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
@@ -16071,11 +16071,6 @@ Source: http://download.micron.com/pdf/datasheets/dram/sdram/256MSDRAM.pdf</desc
 <packages>
 </packages>
 <symbols>
-<symbol name="GND">
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
 <symbol name="+5V">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
@@ -16084,19 +16079,6 @@ Source: http://download.micron.com/pdf/datasheets/dram/sdram/256MSDRAM.pdf</desc
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" prefix="GND">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="GND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="+5V" prefix="P+">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -17001,9 +16983,6 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="SLOT5" library="pcie" deviceset="PCIE_64" device="">
 <attribute name="USE" value="10018784-10201TLF"/>
 </part>
-<part name="SLOT6" library="pcie" deviceset="PCIE_64" device="">
-<attribute name="USE" value="10018784-10201TLF"/>
-</part>
 <part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.2" package3d_urn="urn:adsk.eagle:package:14275/1"/>
 <part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.2" package3d_urn="urn:adsk.eagle:package:14275/1"/>
 <part name="H3" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-HOLE" device="3.2" package3d_urn="urn:adsk.eagle:package:14275/1"/>
@@ -17020,19 +16999,17 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="XTAG" library="pinhead" deviceset="PINHD-2X10" device="/90" value="1175-1618-ND"/>
 <part name="C53" library="rcl" deviceset="C-EU" device="C0201" value="10nF"/>
 <part name="U$5" library="sjg-logic" deviceset="74LVC1G07SE-7" device=""/>
-<part name="R14" library="rcl" deviceset="R-EU_" device="R1206" value="47K"/>
-<part name="C54" library="rcl" deviceset="C-EU" device="C1206" value="100nF"/>
-<part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="R14" library="rcl" deviceset="R-EU_" device="R0201" value="47K"/>
+<part name="C54" library="rcl" deviceset="C-EU" device="C0201" value="0.1uF"/>
 <part name="U$11" library="sjg-power" deviceset="TPS3808G09DBVR" device=""/>
-<part name="R15" library="rcl" deviceset="R-EU_" device="R1206" value="47K"/>
-<part name="C55" library="rcl" deviceset="C-EU" device="C1206" value="100nF"/>
-<part name="C56" library="rcl" deviceset="C-EU" device="C1206" value="120pF"/>
-<part name="C57" library="rcl" deviceset="C-EU" device="C1206" value="10nF"/>
+<part name="R15" library="rcl" deviceset="R-EU_" device="R0201" value="47K"/>
+<part name="C55" library="rcl" deviceset="C-EU" device="C0201" value="0.1uF"/>
+<part name="C56" library="rcl" deviceset="C-EU" device="C0201" value="120pF"/>
+<part name="C57" library="rcl" deviceset="C-EU" device="C0201" value="10nF"/>
 <part name="RESET_SW" library="SparkFun" deviceset="TAC_SWITCH" device="PTH" value="MANUAL_RESET"/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="JTAG5V" library="pinhead" deviceset="PINHD-1X2" device="" value="PSU"/>
 <part name="+3V20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
-<part name="+3V21" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V22" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="+3V23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="SUPPLY30" library="supply2" deviceset="GND" device=""/>
@@ -17042,6 +17019,9 @@ Button commonly used for reset or general input. Spark Fun Electronics SKU : COM
 <part name="SUPPLY34" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY35" library="supply2" deviceset="GND" device=""/>
 <part name="VDD3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VDD" device=""/>
+<part name="SUPPLY36" library="supply2" deviceset="GND" device=""/>
+<part name="R16" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
+<part name="R17" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
 </parts>
 <sheets>
 <sheet>
@@ -20324,9 +20304,6 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <attribute name="NAME" x="-102.616" y="-12.319" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-102.616" y="-17.399" size="1.778" layer="96"/>
 </instance>
-<instance part="GND19" gate="1" x="-67.31" y="2.54" smashed="yes">
-<attribute name="VALUE" x="-69.85" y="0" size="1.778" layer="96"/>
-</instance>
 <instance part="U$11" gate="G$1" x="-50.8" y="-40.64" smashed="yes">
 <attribute name="NAME" x="-68.58" y="-29.972" size="1.778" layer="94"/>
 <attribute name="VALUE" x="-35.56" y="-51.308" size="1.778" layer="94" rot="R180"/>
@@ -20335,21 +20312,21 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <attribute name="NAME" x="-90.3986" y="-31.75" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-85.598" y="-31.75" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C55" gate="G$1" x="-66.04" y="-7.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="-66.421" y="-6.096" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-61.341" y="-6.096" size="1.778" layer="96" rot="R90"/>
+<instance part="C55" gate="G$1" x="-66.04" y="-5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="-66.421" y="-3.556" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-61.341" y="-3.556" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C56" gate="G$1" x="-81.28" y="-50.8" smashed="yes">
 <attribute name="NAME" x="-79.756" y="-50.419" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-79.756" y="-55.499" size="1.778" layer="96"/>
 </instance>
-<instance part="C57" gate="G$1" x="-38.1" y="-7.62" smashed="yes" rot="R90">
-<attribute name="NAME" x="-38.481" y="-6.096" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-33.401" y="-6.096" size="1.778" layer="96" rot="R90"/>
+<instance part="C57" gate="G$1" x="-38.1" y="-5.08" smashed="yes" rot="R90">
+<attribute name="NAME" x="-38.481" y="-3.556" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-33.401" y="-3.556" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="RESET_SW" gate="S" x="-5.08" y="-5.08" smashed="yes">
-<attribute name="NAME" x="-7.62" y="1.27" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-15.24" y="6.35" size="2.1844" layer="96"/>
+<instance part="RESET_SW" gate="S" x="-5.08" y="-2.54" smashed="yes">
+<attribute name="NAME" x="-7.62" y="3.81" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-15.24" y="8.89" size="2.1844" layer="96"/>
 </instance>
 <instance part="P+6" gate="1" x="-91.44" y="66.04" smashed="yes">
 <attribute name="VALUE" x="-93.98" y="60.96" size="1.778" layer="96" rot="R90"/>
@@ -20360,9 +20337,6 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 </instance>
 <instance part="+3V20" gate="G$1" x="27.94" y="119.38" smashed="yes">
 <attribute name="VALUE" x="30.48" y="121.92" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="+3V21" gate="G$1" x="-88.9" y="7.62" smashed="yes">
-<attribute name="VALUE" x="-86.36" y="10.16" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="+3V22" gate="G$1" x="-104.14" y="7.62" smashed="yes">
 <attribute name="VALUE" x="-101.6" y="10.16" size="1.778" layer="96" rot="R180"/>
@@ -20376,8 +20350,8 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <instance part="SUPPLY31" gate="GND" x="-104.14" y="-30.48" smashed="yes">
 <attribute name="VALUE" x="-106.045" y="-33.655" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY32" gate="GND" x="-50.8" y="-15.24" smashed="yes">
-<attribute name="VALUE" x="-52.705" y="-18.415" size="1.778" layer="96"/>
+<instance part="SUPPLY32" gate="GND" x="-50.8" y="-12.7" smashed="yes">
+<attribute name="VALUE" x="-52.705" y="-15.875" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY33" gate="GND" x="-81.28" y="-66.04" smashed="yes">
 <attribute name="VALUE" x="-83.185" y="-69.215" size="1.778" layer="96"/>
@@ -20385,11 +20359,14 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <instance part="SUPPLY34" gate="GND" x="-12.7" y="-66.04" smashed="yes">
 <attribute name="VALUE" x="-14.605" y="-69.215" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY35" gate="GND" x="5.08" y="-15.24" smashed="yes">
-<attribute name="VALUE" x="3.175" y="-18.415" size="1.778" layer="96"/>
+<instance part="SUPPLY35" gate="GND" x="5.08" y="-12.7" smashed="yes">
+<attribute name="VALUE" x="3.175" y="-15.875" size="1.778" layer="96"/>
 </instance>
 <instance part="VDD3" gate="G$1" x="-12.7" y="-30.48" smashed="yes">
 <attribute name="VALUE" x="-14.605" y="-27.305" size="1.778" layer="96"/>
+</instance>
+<instance part="SUPPLY36" gate="GND" x="-63.5" y="10.16" smashed="yes">
+<attribute name="VALUE" x="-65.405" y="6.985" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -20416,29 +20393,6 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="XTAG" gate="A" pin="4"/>
-<wire x1="-76.2" y1="38.1" x2="-80.01" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-80.01" y1="38.1" x2="-80.01" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="XTAG" gate="A" pin="8"/>
-<wire x1="-80.01" y1="33.02" x2="-76.2" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-80.01" y1="33.02" x2="-80.01" y2="27.94" width="0.1524" layer="91"/>
-<junction x="-80.01" y="33.02"/>
-<pinref part="XTAG" gate="A" pin="12"/>
-<wire x1="-80.01" y1="27.94" x2="-76.2" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="-80.01" y1="27.94" x2="-80.01" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-80.01" y="27.94"/>
-<pinref part="XTAG" gate="A" pin="16"/>
-<wire x1="-80.01" y1="22.86" x2="-76.2" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-80.01" y1="22.86" x2="-80.01" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-80.01" y="22.86"/>
-<pinref part="XTAG" gate="A" pin="20"/>
-<wire x1="-80.01" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="-76.2" y1="17.78" x2="-67.31" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-67.31" y1="17.78" x2="-67.31" y2="5.08" width="0.1524" layer="91"/>
-<junction x="-76.2" y="17.78"/>
-</segment>
-<segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
 <wire x1="58.42" y1="109.22" x2="63.5" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="109.22" x2="63.5" y2="99.06" width="0.1524" layer="91"/>
@@ -20462,22 +20416,22 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 </segment>
 <segment>
 <pinref part="RESET_SW" gate="S" pin="4"/>
-<wire x1="0" y1="-7.62" x2="5.08" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="RESET_SW" gate="S" pin="3"/>
 <wire x1="0" y1="-5.08" x2="5.08" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="-5.08" x2="5.08" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="RESET_SW" gate="S" pin="3"/>
+<wire x1="0" y1="-2.54" x2="5.08" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-2.54" x2="5.08" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY35" gate="GND" pin="GND"/>
-<wire x1="5.08" y1="-12.7" x2="5.08" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="5.08" y="-7.62"/>
+<wire x1="5.08" y1="-10.16" x2="5.08" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="5.08" y="-5.08"/>
 </segment>
 <segment>
 <pinref part="SUPPLY32" gate="GND" pin="GND"/>
-<wire x1="-50.8" y1="-12.7" x2="-50.8" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-10.16" x2="-50.8" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="C57" gate="G$1" pin="1"/>
-<wire x1="-50.8" y1="-7.62" x2="-40.64" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-5.08" x2="-40.64" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="C55" gate="G$1" pin="2"/>
-<wire x1="-50.8" y1="-7.62" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-50.8" y="-7.62"/>
+<wire x1="-50.8" y1="-5.08" x2="-60.96" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-50.8" y="-5.08"/>
 </segment>
 <segment>
 <pinref part="U$5" gate="G$1" pin="GND@3"/>
@@ -20487,6 +20441,31 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <pinref part="SUPPLY31" gate="GND" pin="GND"/>
 <wire x1="-104.14" y1="-27.94" x2="-104.14" y2="-22.86" width="0.1524" layer="91"/>
 <junction x="-104.14" y="-22.86"/>
+</segment>
+<segment>
+<pinref part="XTAG" gate="A" pin="4"/>
+<wire x1="-76.2" y1="38.1" x2="-80.01" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-80.01" y1="38.1" x2="-80.01" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="XTAG" gate="A" pin="8"/>
+<wire x1="-80.01" y1="33.02" x2="-76.2" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="-80.01" y1="33.02" x2="-80.01" y2="27.94" width="0.1524" layer="91"/>
+<junction x="-80.01" y="33.02"/>
+<pinref part="XTAG" gate="A" pin="12"/>
+<wire x1="-80.01" y1="27.94" x2="-76.2" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-80.01" y1="27.94" x2="-80.01" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-80.01" y="27.94"/>
+<pinref part="XTAG" gate="A" pin="16"/>
+<wire x1="-80.01" y1="22.86" x2="-76.2" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-80.01" y1="22.86" x2="-80.01" y2="17.78" width="0.1524" layer="91"/>
+<junction x="-80.01" y="22.86"/>
+<pinref part="XTAG" gate="A" pin="20"/>
+<wire x1="-80.01" y1="17.78" x2="-76.2" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-76.2" y1="17.78" x2="-68.58" y2="17.78" width="0.1524" layer="91"/>
+<junction x="-76.2" y="17.78"/>
+<pinref part="SUPPLY36" gate="GND" pin="GND"/>
+<wire x1="-68.58" y1="17.78" x2="-67.31" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-67.31" y1="17.78" x2="-63.5" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="17.78" x2="-63.5" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TDO" class="0">
@@ -20614,17 +20593,17 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <segment>
 <pinref part="U$11" gate="G$1" pin="!MR!@3"/>
 <wire x1="-30.48" y1="-35.56" x2="-22.86" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="-35.56" x2="-22.86" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-35.56" x2="-22.86" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="C57" gate="G$1" pin="2"/>
-<wire x1="-22.86" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-5.08" x2="-33.02" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="RESET_SW" gate="S" pin="2"/>
-<wire x1="-22.86" y1="-7.62" x2="-15.24" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-22.86" y="-7.62"/>
+<wire x1="-22.86" y1="-5.08" x2="-15.24" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-22.86" y="-5.08"/>
 <pinref part="RESET_SW" gate="S" pin="1"/>
-<wire x1="-15.24" y1="-7.62" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-15.24" y1="-7.62" x2="-15.24" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="-5.08" x2="-10.16" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="-15.24" y="-7.62"/>
+<wire x1="-15.24" y1="-5.08" x2="-15.24" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-15.24" y1="-2.54" x2="-10.16" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-15.24" y="-5.08"/>
 </segment>
 </net>
 <net name="+5V" class="2">
@@ -20658,27 +20637,6 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <label x="-94.488" y="18.288" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="R15" gate="G$1" pin="2"/>
-<wire x1="-88.9" y1="-22.86" x2="-88.9" y2="-7.62" width="0.1524" layer="91"/>
-<pinref part="C55" gate="G$1" pin="1"/>
-<wire x1="-88.9" y1="-7.62" x2="-88.9" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="-68.58" y1="-7.62" x2="-78.74" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-88.9" y="-7.62"/>
-<pinref part="U$11" gate="G$1" pin="VDD@6"/>
-<wire x1="-78.74" y1="-7.62" x2="-88.9" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-73.66" y1="-35.56" x2="-78.74" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="-78.74" y1="-35.56" x2="-78.74" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-78.74" y="-7.62"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="C54" gate="G$1" pin="1"/>
-<wire x1="-104.14" y1="-10.16" x2="-104.14" y2="2.54" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="VCC@5"/>
@@ -20708,6 +20666,24 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <pinref part="+3V20" gate="G$1" pin="+3V3"/>
 <wire x1="27.94" y1="114.3" x2="27.94" y2="116.84" width="0.1524" layer="91"/>
 <junction x="27.94" y="114.3"/>
+</segment>
+<segment>
+<pinref part="C54" gate="G$1" pin="1"/>
+<wire x1="-104.14" y1="-10.16" x2="-104.14" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="+3V22" gate="G$1" pin="+3V3"/>
+<pinref part="R15" gate="G$1" pin="2"/>
+<wire x1="-104.14" y1="-5.08" x2="-104.14" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="-22.86" x2="-88.9" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="C55" gate="G$1" pin="1"/>
+<wire x1="-68.58" y1="-5.08" x2="-78.74" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="U$11" gate="G$1" pin="VDD@6"/>
+<wire x1="-78.74" y1="-5.08" x2="-88.9" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="-73.66" y1="-35.56" x2="-78.74" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="-35.56" x2="-78.74" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-78.74" y="-5.08"/>
+<wire x1="-88.9" y1="-5.08" x2="-104.14" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="-88.9" y="-5.08"/>
+<junction x="-104.14" y="-5.08"/>
 </segment>
 </net>
 </nets>
@@ -21324,10 +21300,60 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <attribute name="SHEET" x="175.26" y="-130.81" size="2.54" layer="94"/>
 <attribute name="DRAWING_NAME" x="106.68" y="-113.03" size="2.54" layer="94"/>
 </instance>
+<instance part="R16" gate="G$1" x="63.5" y="86.36" smashed="yes" rot="MR0">
+<attribute name="NAME" x="76.708" y="86.5886" size="1.27" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="65.024" y="85.598" size="1.27" layer="96" rot="MR0"/>
+</instance>
+<instance part="R17" gate="G$1" x="63.5" y="83.82" smashed="yes" rot="MR0">
+<attribute name="NAME" x="68.58" y="81.0006" size="1.27" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="64.77" y="83.058" size="1.27" layer="96" rot="MR0"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
+<net name="JTAG_DN1" class="0">
+<segment>
+<wire x1="83.82" y1="91.44" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
+<label x="50.292" y="90.932" size="1.27" layer="95" rot="MR0"/>
+<pinref part="U$1" gate="-LINK" pin="X1D16@U2"/>
+</segment>
+</net>
+<net name="JTAG_DN0" class="0">
+<segment>
+<wire x1="83.82" y1="88.9" x2="50.8" y2="88.9" width="0.1524" layer="91"/>
+<label x="50.292" y="88.392" size="1.27" layer="95" rot="MR0"/>
+<pinref part="U$1" gate="-LINK" pin="X1D17@U1"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<wire x1="83.82" y1="86.36" x2="68.58" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="-LINK" pin="X1D18@V2"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<wire x1="83.82" y1="83.82" x2="68.58" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="-LINK" pin="X1D19@V1"/>
+</segment>
+</net>
+<net name="JTAG_UP0" class="0">
+<segment>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="86.36" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
+<label x="50.292" y="85.852" size="1.27" layer="95" rot="MR0"/>
+</segment>
+</net>
+<net name="JTAG_UP1" class="0">
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="58.42" y1="83.82" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
+<label x="50.292" y="83.312" size="1.27" layer="95" rot="MR0"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -21383,11 +21409,6 @@ Use copper strip 20mm wide to distribute to various vregs</text>
 <attribute name="NAME" x="266.7" y="48.768" size="1.27" layer="94"/>
 <attribute name="VALUE" x="266.7" y="-38.1" size="1.27" layer="94"/>
 <attribute name="USE" x="274.32" y="7.62" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="SLOT6" gate="G$1" x="375.92" y="7.62" smashed="yes">
-<attribute name="NAME" x="368.3" y="48.768" size="1.27" layer="94"/>
-<attribute name="VALUE" x="368.3" y="-38.1" size="1.27" layer="94"/>
-<attribute name="USE" x="375.92" y="7.62" size="1.778" layer="96" display="off"/>
 </instance>
 </instances>
 <busses>
