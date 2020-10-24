@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -19396,11 +19396,6 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY44" library="supply2" deviceset="GND" device=""/>
 <part name="C66" library="rcl" deviceset="C-EU" device="C0201" value="100nF"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-2X9" device="" package3d_urn="urn:adsk.eagle:package:22484/2"/>
-<part name="R31" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
-<part name="R32" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
-<part name="R33" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
-<part name="R34" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
-<part name="R35" library="rcl" deviceset="R-EU_" device="R0201" value="33R"/>
 </parts>
 <sheets>
 <sheet>
@@ -24590,6 +24585,7 @@ so use 1K resistors</text>
 <sheet>
 <description>XMOS slots</description>
 <plain>
+<text x="15.24" y="55.88" size="1.778" layer="91">Need to fix the RX lines, add 33R to tx, and place on grid</text>
 </plain>
 <instances>
 <instance part="FRAME7" gate="G$1" x="-195.58" y="-124.46" smashed="yes"/>
@@ -24625,26 +24621,6 @@ so use 1K resistors</text>
 <instance part="JP1" gate="A" x="22.86" y="86.36" smashed="yes">
 <attribute name="NAME" x="16.51" y="99.695" size="1.778" layer="95"/>
 <attribute name="VALUE" x="16.51" y="71.12" size="1.778" layer="96"/>
-</instance>
-<instance part="R31" gate="G$1" x="109.22" y="86.36" smashed="yes" rot="MR0">
-<attribute name="NAME" x="115.57" y="87.2236" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="110.49" y="85.598" size="1.27" layer="96" rot="MR0"/>
-</instance>
-<instance part="R32" gate="G$1" x="109.22" y="83.82" smashed="yes" rot="MR0">
-<attribute name="NAME" x="115.57" y="84.8106" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="110.49" y="83.058" size="1.27" layer="96" rot="MR0"/>
-</instance>
-<instance part="R33" gate="G$1" x="109.22" y="81.28" smashed="yes" rot="MR0">
-<attribute name="NAME" x="115.57" y="82.2706" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="110.49" y="80.518" size="1.27" layer="96" rot="MR0"/>
-</instance>
-<instance part="R34" gate="G$1" x="109.22" y="78.74" smashed="yes" rot="MR0">
-<attribute name="NAME" x="115.57" y="79.7306" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="110.49" y="77.978" size="1.27" layer="96" rot="MR0"/>
-</instance>
-<instance part="R35" gate="G$1" x="109.22" y="76.2" smashed="yes" rot="MR0">
-<attribute name="NAME" x="115.57" y="77.1906" size="1.27" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="110.49" y="75.438" size="1.27" layer="96" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -25240,6 +25216,7 @@ so use 1K resistors</text>
 <wire x1="-7.62" y1="93.98" x2="-5.08" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="96.52" x2="20.32" y2="96.52" width="0.1524" layer="91"/>
 <label x="-2.54" y="96.52" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="5"/>
 <pinref part="JP1" gate="A" pin="1"/>
 </segment>
 <segment>
@@ -25256,19 +25233,25 @@ so use 1K resistors</text>
 <label x="-2.54" y="93.98" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="3"/>
 </segment>
+<segment>
+<wire x1="60.96" y1="91.44" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="93.98" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
+<label x="50.8" y="93.98" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="4"/>
+</segment>
 </net>
 <net name="RX1" class="0">
+<segment>
+<wire x1="-7.62" y1="88.9" x2="-5.08" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="91.44" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
+<label x="-2.54" y="91.44" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="9"/>
+</segment>
 <segment>
 <wire x1="91.44" y1="88.9" x2="93.98" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="91.44" x2="119.38" y2="91.44" width="0.1524" layer="91"/>
 <label x="96.52" y="91.44" size="1.778" layer="95"/>
 <pinref part="XMOS" gate="-LINK" pin="X1D64@M1"/>
-</segment>
-<segment>
-<wire x1="-7.62" y1="88.9" x2="-5.08" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="91.44" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
-<label x="-2.54" y="91.44" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="5"/>
 </segment>
 </net>
 <net name="+5V" class="2">
@@ -25276,7 +25259,27 @@ so use 1K resistors</text>
 <wire x1="-7.62" y1="86.36" x2="-5.08" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="88.9" x2="20.32" y2="88.9" width="0.1524" layer="91"/>
 <label x="-2.54" y="88.9" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="13"/>
 <pinref part="JP1" gate="A" pin="7"/>
+</segment>
+<segment>
+<wire x1="60.96" y1="86.36" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="88.9" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
+<label x="50.8" y="88.9" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="8"/>
+</segment>
+</net>
+<net name="RX2" class="0">
+<segment>
+<wire x1="-7.62" y1="83.82" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="86.36" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
+<label x="-2.54" y="86.36" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="91.44" y1="91.44" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
+<label x="96.52" y="93.98" size="1.778" layer="95"/>
+<wire x1="93.98" y1="93.98" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="XMOS" gate="-LINK" pin="X1D63@M2"/>
 </segment>
 </net>
 <net name="+3V3" class="1">
@@ -25286,19 +25289,24 @@ so use 1K resistors</text>
 <label x="-2.54" y="83.82" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="11"/>
 </segment>
+<segment>
+<wire x1="60.96" y1="81.28" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="83.82" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
+<label x="50.8" y="83.82" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="12"/>
+</segment>
 </net>
 <net name="RX3" class="0">
+<segment>
+<wire x1="-7.62" y1="78.74" x2="-5.08" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
+<label x="-2.54" y="81.28" size="1.778" layer="95"/>
+</segment>
 <segment>
 <wire x1="91.44" y1="93.98" x2="93.98" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="96.52" x2="119.38" y2="96.52" width="0.1524" layer="91"/>
 <label x="96.52" y="96.52" size="1.778" layer="95"/>
 <pinref part="XMOS" gate="-LINK" pin="X1D62@M3"/>
-</segment>
-<segment>
-<wire x1="-7.62" y1="78.74" x2="-5.08" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="81.28" x2="20.32" y2="81.28" width="0.1524" layer="91"/>
-<label x="-2.54" y="81.28" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="13"/>
 </segment>
 </net>
 <net name="VDD" class="0">
@@ -25308,22 +25316,26 @@ so use 1K resistors</text>
 <label x="-2.54" y="78.74" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="15"/>
 </segment>
+<segment>
+<wire x1="60.96" y1="76.2" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="78.74" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
+<label x="50.8" y="78.74" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="16"/>
+</segment>
 </net>
 <net name="RX4" class="0">
+<segment>
+<wire x1="-7.62" y1="73.66" x2="-5.08" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="76.2" x2="20.32" y2="76.2" width="0.1524" layer="91"/>
+<label x="-2.54" y="76.2" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="17"/>
+</segment>
 <segment>
 <wire x1="91.44" y1="96.52" x2="93.98" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="99.06" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
 <label x="96.52" y="99.06" size="1.778" layer="95"/>
 <pinref part="XMOS" gate="-LINK" pin="X1D68@P1"/>
 <pinref part="XMOS" gate="-LINK" pin="X1D61@L3"/>
-<pinref part="R33" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="-7.62" y1="73.66" x2="-5.08" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="76.2" x2="20.32" y2="76.2" width="0.1524" layer="91"/>
-<label x="-2.54" y="76.2" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="17"/>
 </segment>
 </net>
 <net name="TX0" class="0">
@@ -25333,12 +25345,6 @@ so use 1K resistors</text>
 <label x="50.8" y="96.52" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="2"/>
 </segment>
-<segment>
-<wire x1="91.44" y1="83.82" x2="93.98" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="R31" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="86.36" x2="104.14" y2="86.36" width="0.1524" layer="91"/>
-<label x="96.52" y="86.36" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="TX1" class="0">
 <segment>
@@ -25346,12 +25352,6 @@ so use 1K resistors</text>
 <wire x1="27.94" y1="91.44" x2="58.42" y2="91.44" width="0.1524" layer="91"/>
 <label x="50.8" y="91.44" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="6"/>
-</segment>
-<segment>
-<wire x1="91.44" y1="81.28" x2="93.98" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="R32" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="83.82" x2="104.14" y2="83.82" width="0.1524" layer="91"/>
-<label x="96.52" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TX2" class="0">
@@ -25361,12 +25361,6 @@ so use 1K resistors</text>
 <label x="50.8" y="86.36" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="10"/>
 </segment>
-<segment>
-<wire x1="91.44" y1="78.74" x2="93.98" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="R33" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="81.28" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
-<label x="96.52" y="81.28" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="TX3" class="0">
 <segment>
@@ -25375,12 +25369,6 @@ so use 1K resistors</text>
 <label x="50.8" y="81.28" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="14"/>
 </segment>
-<segment>
-<wire x1="91.44" y1="76.2" x2="93.98" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="R34" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="78.74" x2="104.14" y2="78.74" width="0.1524" layer="91"/>
-<label x="96.52" y="78.74" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="TX4" class="0">
 <segment>
@@ -25388,86 +25376,6 @@ so use 1K resistors</text>
 <wire x1="27.94" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
 <label x="50.8" y="76.2" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="18"/>
-</segment>
-<segment>
-<wire x1="91.44" y1="73.66" x2="93.98" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="R35" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="76.2" x2="104.14" y2="76.2" width="0.1524" layer="91"/>
-<label x="96.52" y="76.2" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$21" class="0">
-<segment>
-<wire x1="60.96" y1="91.44" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="93.98" x2="58.42" y2="93.98" width="0.1524" layer="91"/>
-<label x="50.8" y="93.98" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="4"/>
-</segment>
-</net>
-<net name="N$24" class="2">
-<segment>
-<wire x1="60.96" y1="86.36" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="88.9" x2="58.42" y2="88.9" width="0.1524" layer="91"/>
-<label x="50.8" y="88.9" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="8"/>
-</segment>
-</net>
-<net name="N$25" class="1">
-<segment>
-<wire x1="60.96" y1="81.28" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="83.82" x2="58.42" y2="83.82" width="0.1524" layer="91"/>
-<label x="50.8" y="83.82" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="12"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<wire x1="60.96" y1="76.2" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="78.74" x2="58.42" y2="78.74" width="0.1524" layer="91"/>
-<label x="50.8" y="78.74" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="16"/>
-</segment>
-</net>
-<net name="RX2" class="0">
-<segment>
-<wire x1="-7.62" y1="83.82" x2="-5.08" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-5.08" y1="86.36" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
-<label x="-2.54" y="86.36" size="1.778" layer="95"/>
-<pinref part="JP1" gate="A" pin="9"/>
-</segment>
-<segment>
-<wire x1="91.44" y1="91.44" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="93.98" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
-<label x="96.52" y="93.98" size="1.778" layer="95"/>
-<pinref part="XMOS" gate="-LINK" pin="X1D63@M2"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="R31" gate="G$1" pin="1"/>
-<pinref part="XMOS" gate="-LINK" pin="X1D66@N2"/>
-<wire x1="114.3" y1="86.36" x2="119.38" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$28" class="0">
-<segment>
-<pinref part="XMOS" gate="-LINK" pin="X1D67@P2"/>
-<pinref part="R32" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="83.82" x2="114.3" y2="83.82" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$29" class="0">
-<segment>
-<pinref part="XMOS" gate="-LINK" pin="X1D69@R1"/>
-<wire x1="119.38" y1="78.74" x2="114.3" y2="78.74" width="0.1524" layer="91"/>
-<pinref part="R34" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="R35" gate="G$1" pin="1"/>
-<pinref part="XMOS" gate="-LINK" pin="X1D70@R2"/>
-<wire x1="114.3" y1="76.2" x2="119.38" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
