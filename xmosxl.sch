@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="no"/>
@@ -19089,6 +19089,14 @@ Source: www.kingbright.com</description>
 </class>
 <class number="2" name="5v power" width="0.3048" drill="0">
 </class>
+<class number="3" name="link5tx" width="0" drill="0">
+</class>
+<class number="4" name="link5rx" width="0" drill="0">
+</class>
+<class number="5" name="link2tx" width="0" drill="0">
+</class>
+<class number="6" name="link2rx" width="0" drill="0">
+</class>
 </classes>
 <groups>
 <schematic_group name="DIRECTIONALITY1"/>
@@ -23097,21 +23105,21 @@ so use 1K resistors</text>
 <label x="-65.532" y="35.052" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="JTAG_UP0" class="0">
+<net name="JTAG_UP0" class="5">
 <segment>
 <pinref part="XTAG" gate="A" pin="10"/>
 <wire x1="-76.2" y1="30.48" x2="-66.04" y2="30.48" width="0.1524" layer="91"/>
 <label x="-65.532" y="29.972" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="JTAG_DN0" class="0">
+<net name="JTAG_DN0" class="6">
 <segment>
 <pinref part="XTAG" gate="A" pin="14"/>
 <wire x1="-76.2" y1="25.4" x2="-66.04" y2="25.4" width="0.1524" layer="91"/>
 <label x="-65.532" y="24.892" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="JTAG_DN1" class="0">
+<net name="JTAG_DN1" class="6">
 <segment>
 <pinref part="XTAG" gate="A" pin="18"/>
 <wire x1="-76.2" y1="20.32" x2="-66.04" y2="20.32" width="0.1524" layer="91"/>
@@ -25223,14 +25231,14 @@ so use 1K resistors</text>
 <pinref part="XMOS" gate="-SLOTBUS" pin="X1D20@Y8"/>
 </segment>
 </net>
-<net name="JTAG_DN1" class="0">
+<net name="JTAG_DN1" class="6">
 <segment>
 <wire x1="119.38" y1="121.92" x2="86.36" y2="121.92" width="0.1524" layer="91"/>
 <label x="85.852" y="121.412" size="1.27" layer="95" rot="MR0"/>
 <pinref part="XMOS" gate="-LINK" pin="X1D16@U2"/>
 </segment>
 </net>
-<net name="JTAG_DN0" class="0">
+<net name="JTAG_DN0" class="6">
 <segment>
 <wire x1="119.38" y1="119.38" x2="86.36" y2="119.38" width="0.1524" layer="91"/>
 <label x="85.852" y="118.872" size="1.27" layer="95" rot="MR0"/>
@@ -25251,7 +25259,7 @@ so use 1K resistors</text>
 <pinref part="XMOS" gate="-LINK" pin="X1D19@V1"/>
 </segment>
 </net>
-<net name="JTAG_UP0" class="0">
+<net name="JTAG_UP0" class="5">
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <wire x1="93.98" y1="116.84" x2="86.36" y2="116.84" width="0.1524" layer="91"/>
@@ -25265,7 +25273,7 @@ so use 1K resistors</text>
 <label x="85.852" y="113.792" size="1.27" layer="95" rot="MR0"/>
 </segment>
 </net>
-<net name="RX0" class="0">
+<net name="RX0" class="4">
 <segment>
 <wire x1="76.2" y1="86.36" x2="78.74" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="88.9" x2="119.38" y2="88.9" width="0.1524" layer="91"/>
@@ -25279,7 +25287,7 @@ so use 1K resistors</text>
 <pinref part="JP1" gate="A" pin="1"/>
 </segment>
 </net>
-<net name="RX1" class="0">
+<net name="RX1" class="4">
 <segment>
 <wire x1="76.2" y1="88.9" x2="78.74" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="91.44" x2="119.38" y2="91.44" width="0.1524" layer="91"/>
@@ -25327,7 +25335,7 @@ so use 1K resistors</text>
 <label x="-17.78" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RX2" class="0">
+<net name="RX2" class="4">
 <segment>
 <wire x1="76.2" y1="91.44" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
 <label x="81.28" y="93.98" size="1.778" layer="95"/>
@@ -25341,7 +25349,7 @@ so use 1K resistors</text>
 <pinref part="JP1" gate="A" pin="9"/>
 </segment>
 </net>
-<net name="RX3" class="0">
+<net name="RX3" class="4">
 <segment>
 <wire x1="76.2" y1="93.98" x2="78.74" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="96.52" x2="119.38" y2="96.52" width="0.1524" layer="91"/>
@@ -25355,7 +25363,7 @@ so use 1K resistors</text>
 <pinref part="JP1" gate="A" pin="13"/>
 </segment>
 </net>
-<net name="RX4" class="0">
+<net name="RX4" class="4">
 <segment>
 <wire x1="76.2" y1="96.52" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="99.06" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
@@ -25372,7 +25380,7 @@ so use 1K resistors</text>
 <pinref part="JP1" gate="A" pin="17"/>
 </segment>
 </net>
-<net name="TX0" class="0">
+<net name="TX0" class="3">
 <segment>
 <wire x1="45.72" y1="93.98" x2="43.18" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="96.52" x2="43.18" y2="96.52" width="0.1524" layer="91"/>
@@ -25386,7 +25394,7 @@ so use 1K resistors</text>
 <label x="81.28" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX1" class="0">
+<net name="TX1" class="3">
 <segment>
 <wire x1="45.72" y1="88.9" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="91.44" x2="43.18" y2="91.44" width="0.1524" layer="91"/>
@@ -25400,7 +25408,7 @@ so use 1K resistors</text>
 <label x="81.28" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX2" class="0">
+<net name="TX2" class="3">
 <segment>
 <wire x1="45.72" y1="83.82" x2="43.18" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="86.36" x2="43.18" y2="86.36" width="0.1524" layer="91"/>
@@ -25414,7 +25422,7 @@ so use 1K resistors</text>
 <label x="81.28" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX3" class="0">
+<net name="TX3" class="3">
 <segment>
 <wire x1="45.72" y1="78.74" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="81.28" x2="43.18" y2="81.28" width="0.1524" layer="91"/>
@@ -25428,7 +25436,7 @@ so use 1K resistors</text>
 <label x="81.28" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX4" class="0">
+<net name="TX4" class="3">
 <segment>
 <wire x1="45.72" y1="73.66" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="76.2" x2="43.18" y2="76.2" width="0.1524" layer="91"/>
