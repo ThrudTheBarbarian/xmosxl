@@ -2149,6 +2149,80 @@ Metric Code Size 1005</description>
 <wire x1="-9.65" y1="-9.65" x2="-9.65" y2="9.65" width="0.2" layer="21"/>
 <circle x="-11.225" y="9.5" radius="0.125" width="0.25" layer="25"/>
 </package>
+<package name="SOP80P1176X120-54N">
+<description>&lt;b&gt;54-Pin Plastic TSOP "TG/P" (400 mil)_1&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-5.728" y="10.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="2" x="-5.728" y="9.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="3" x="-5.728" y="8.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="4" x="-5.728" y="8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="5" x="-5.728" y="7.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="6" x="-5.728" y="6.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="7" x="-5.728" y="5.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="8" x="-5.728" y="4.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="9" x="-5.728" y="4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="10" x="-5.728" y="3.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="11" x="-5.728" y="2.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="12" x="-5.728" y="1.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="13" x="-5.728" y="0.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="14" x="-5.728" y="0" dx="1.295" dy="0.6" layer="1"/>
+<smd name="15" x="-5.728" y="-0.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="16" x="-5.728" y="-1.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="17" x="-5.728" y="-2.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="18" x="-5.728" y="-3.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="19" x="-5.728" y="-4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="20" x="-5.728" y="-4.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="21" x="-5.728" y="-5.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="22" x="-5.728" y="-6.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="23" x="-5.728" y="-7.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="24" x="-5.728" y="-8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="25" x="-5.728" y="-8.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="26" x="-5.728" y="-9.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="27" x="-5.728" y="-10.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="28" x="5.728" y="-10.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="29" x="5.728" y="-9.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="30" x="5.728" y="-8.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="31" x="5.728" y="-8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="32" x="5.728" y="-7.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="33" x="5.728" y="-6.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="34" x="5.728" y="-5.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="35" x="5.728" y="-4.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="36" x="5.728" y="-4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="37" x="5.728" y="-3.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="38" x="5.728" y="-2.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="39" x="5.728" y="-1.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="40" x="5.728" y="-0.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="41" x="5.728" y="0" dx="1.295" dy="0.6" layer="1"/>
+<smd name="42" x="5.728" y="0.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="43" x="5.728" y="1.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="44" x="5.728" y="2.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="45" x="5.728" y="3.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="46" x="5.728" y="4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="47" x="5.728" y="4.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="48" x="5.728" y="5.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="49" x="5.728" y="6.4" dx="1.295" dy="0.6" layer="1"/>
+<smd name="50" x="5.728" y="7.2" dx="1.295" dy="0.6" layer="1"/>
+<smd name="51" x="5.728" y="8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="52" x="5.728" y="8.8" dx="1.295" dy="0.6" layer="1"/>
+<smd name="53" x="5.728" y="9.6" dx="1.295" dy="0.6" layer="1"/>
+<smd name="54" x="5.728" y="10.4" dx="1.295" dy="0.6" layer="1"/>
+<text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-6.625" y1="11.46" x2="6.625" y2="11.46" width="0.05" layer="51"/>
+<wire x1="6.625" y1="11.46" x2="6.625" y2="-11.46" width="0.05" layer="51"/>
+<wire x1="6.625" y1="-11.46" x2="-6.625" y2="-11.46" width="0.05" layer="51"/>
+<wire x1="-6.625" y1="-11.46" x2="-6.625" y2="11.46" width="0.05" layer="51"/>
+<wire x1="-5.08" y1="11.21" x2="5.08" y2="11.21" width="0.1" layer="51"/>
+<wire x1="5.08" y1="11.21" x2="5.08" y2="-11.21" width="0.1" layer="51"/>
+<wire x1="5.08" y1="-11.21" x2="-5.08" y2="-11.21" width="0.1" layer="51"/>
+<wire x1="-5.08" y1="-11.21" x2="-5.08" y2="11.21" width="0.1" layer="51"/>
+<wire x1="-5.08" y1="10.41" x2="-4.28" y2="11.21" width="0.1" layer="51"/>
+<wire x1="-4.73" y1="11.21" x2="4.73" y2="11.21" width="0.2" layer="21"/>
+<wire x1="4.73" y1="11.21" x2="4.73" y2="-11.21" width="0.2" layer="21"/>
+<wire x1="4.73" y1="-11.21" x2="-4.73" y2="-11.21" width="0.2" layer="21"/>
+<wire x1="-4.73" y1="-11.21" x2="-4.73" y2="11.21" width="0.2" layer="21"/>
+<wire x1="-6.375" y1="11.05" x2="-5.08" y2="11.05" width="0.2" layer="21"/>
+</package>
 </packages>
 </library>
 <library name="sjg-power">
@@ -2868,6 +2942,18 @@ design rules under a new name.
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/Lattice/iCE40HX4K-TQ144?qs=F9A14TELRMvGNTZXkNDuOw%3D%3D" x="29" y="76" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="29" y="73" size="1.27" layer="25" align="center"/>
 <attribute name="VALUE" x="29" y="76" size="1.27" layer="27" align="center"/>
+</element>
+<element name="IC3" library="samacsys" package="SOP80P1176X120-54N" value="AS4C32M8SA-6TIN" x="134" y="71" smashed="yes" rot="R90">
+<attribute name="ARROW_PART_NUMBER" value="MT48LC32M8A2P-6AG" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="ARROW_PRICE-STOCK" value="https://www.arrow.com/en/products/mt48lc32m8a2p-6ag/micron-technology" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DESCRIPTION" value="DRAM Chip SDRAM 256Mbit 32Mx8 3.3V 54-Pin TSOP-II" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="HEIGHT" value="1.2mm" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER_NAME" value="Micron" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="MT48LC32M8A2P-6AG" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER_PART_NUMBER" value="" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MOUSER_PRICE-STOCK" value="" x="134" y="71" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="132" y="72" size="1.27" layer="25" rot="R90" align="center"/>
+<attribute name="VALUE" x="134" y="71" size="1.27" layer="27" rot="R90" align="center"/>
 </element>
 </elements>
 <signals>
